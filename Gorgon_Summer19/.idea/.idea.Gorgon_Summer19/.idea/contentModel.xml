@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\calys\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_Gorgon_Summer19.-750819376.00" t="ExcludeRecursive" />
+    <e p="E:\Documents\Github\2019_Repositories\Gorgon_2019\Gorgon_Summer19" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Checkers" t="Include">
+            <e p="Checkers.cs" t="Include" />
+            <e p="Piece.cs" t="Include" />
+          </e>
+          <e p="ObjectToSpawn.cs" t="Include" />
+          <e p="SpawnToGrid.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Gorgon_Summer19.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
