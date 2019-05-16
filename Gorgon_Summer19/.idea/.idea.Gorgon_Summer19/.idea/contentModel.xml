@@ -6,12 +6,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Behaviours.cs" t="Include" />
           <e p="Checkers" t="Include">
             <e p="Checkers.cs" t="Include" />
             <e p="Piece.cs" t="Include" />
           </e>
-          <e p="ObjectToSpawn.cs" t="Include" />
-          <e p="SpawnToGrid.cs" t="Include" />
+          <e p="InstantiateTransform.cs" t="Include" />
         </e>
       </e>
       <e p="Gorgon_Summer19.sln" t="IncludeFlat" />
