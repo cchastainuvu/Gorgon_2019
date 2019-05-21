@@ -12,13 +12,13 @@
             <e p="Piece.cs" t="Include" />
           </e>
           <e p="DictatePlacement.cs" t="Include" />
+          <e p="DraggableOrthographic.cs" t="Include" />
           <e p="ID" t="Include">
             <e p="NameID.cs" t="Include" />
             <e p="ObjectID.cs" t="Include" />
             <e p="TriggerIDEvents.cs" t="Include" />
           </e>
           <e p="InstantiateTransform.cs" t="Include" />
-          <e p="SetTagOnCollision.cs" t="Include" />
           <e p="ToggleBoolOnClick.cs" t="Include" />
         </e>
       </e>
