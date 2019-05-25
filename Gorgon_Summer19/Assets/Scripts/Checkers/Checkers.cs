@@ -15,11 +15,15 @@ public class Checkers : MonoBehaviour
     private Vector2 _startDrag, _endDrag;
 
     private RaycastHit _hit;
+
+
+    private bool IsWhite, IsWhiteTurn;
     
 
     private void Start()
     {
         GenerateBoard();
+        IsWhiteTurn = true;
     }
 
 
@@ -32,7 +36,12 @@ public class Checkers : MonoBehaviour
         {
             int x = (int) _mouseOver.x;
             int y = (int) _mouseOver.y;
-            
+
+
+            if (_selected != null)
+            {
+                UpdatePieceDrag(_selected);
+            }
             
             if (Input.GetMouseButtonDown(0))
             {
@@ -88,8 +97,75 @@ public class Checkers : MonoBehaviour
         _endDrag = new Vector2(x2, y2);
 
         _selected = pieces[x1, y1];
+
+        //Out of Bounds
+        if (x2 < 0 || x2 >= pieces.Length || y2 < 0 || y2 >= pieces.Length)
+        {
+
+            if (_selected != null)
+            {
+                ArrangePieces(_selected, x1, y1);
+            }
+            
+            _selected = null;
+            _startDrag = Vector2.zero;
+            return;
+        }
+
+        if (_selected != null)
+        {
+            //If the player has not moved.
+            if (_endDrag == _startDrag)
+            {
+                ArrangePieces(_selected, x1, y1);
+                
+                _selected = null;
+                _startDrag = Vector2.zero;
+                return;
+            }
+        }
         
-        ArrangePieces(_selected, x2, y2);
+        //Piece script will check if the move is valid.
+
+        if (_selected.IsValidMove(pieces, x1, y1, x2, y2))
+        {
+            //Was a piece acquired?
+            //Is this a jump?
+
+            if (Mathf.Abs(x1 - x2) == 2)
+            {
+                Piece p = pieces[(x1 + x2) / 2, (y1 + y2) / 2];
+                if (p != null)
+                {
+                    pieces[(x1 + x2) / 2, (y1 + y2) / 2] = null;
+                    Destroy(p);
+                }
+            }
+
+            pieces[x2, y2] = _selected;
+            pieces[x1, y1] = null;
+            ArrangePieces(_selected, x2, y2);
+
+            EndTurn();
+        }
+    }
+
+    private void EndTurn()
+    {
+        _selected = null;
+        _startDrag = Vector2.zero;
+
+        IsWhiteTurn = false;
+    }
+    
+    
+    private void UpdatePieceDrag(Piece p)
+    {
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),
+            out _hit, 25F, LayerMask.GetMask("Board")))
+        {
+            p.transform.position = _hit.point + Vector3.back;
+        }
     }
     
     private void GenerateBoard()
