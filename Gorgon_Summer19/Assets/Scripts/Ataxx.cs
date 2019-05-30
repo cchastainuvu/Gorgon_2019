@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Ataxx : MonoBehaviour
 {
-    private Vector2 _mouseOver, _startDrag, _endDrag;
+    private Vector3 _currentPos, _newPos;
+    private Camera _cam;
 
-    private void Update()
+    void Start()
     {
-        TrackInput();   
+        _cam = Camera.main;
     }
 
-    private void TrackInput()
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (gameObject.CompareTag("Close") || gameObject.CompareTag("Distant"))
-            {
-                
-            }
-        }
+        _currentPos = transform.position - _cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void OnMouseDrag()
+    {
+        _newPos = _currentPos + _cam.ScreenToWorldPoint(Input.mousePosition);
+        _newPos.z = 0;
+
+        transform.position = _newPos;
     }
 }
