@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Near
-  - Far
-  - Piece
+  - Close
+  - Distant
   layers:
   - Default
   - TransparentFX
