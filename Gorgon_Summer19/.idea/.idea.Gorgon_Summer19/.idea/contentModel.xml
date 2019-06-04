@@ -20,7 +20,9 @@
           </e>
           <e p="InputRotation.cs" t="Include" />
           <e p="InstantiateTransform.cs" t="Include" />
+          <e p="LerpForward.cs" t="Include" />
           <e p="ToggleBoolOnClick.cs" t="Include" />
+          <e p="TransformForward.cs" t="Include" />
         </e>
       </e>
       <e p="Gorgon_Summer19.sln" t="IncludeFlat" />
