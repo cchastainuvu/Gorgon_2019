@@ -18,6 +18,7 @@
             <e p="ObjectID.cs" t="Include" />
             <e p="TriggerIDEvents.cs" t="Include" />
           </e>
+          <e p="InputRotation.cs" t="Include" />
           <e p="InstantiateTransform.cs" t="Include" />
           <e p="ToggleBoolOnClick.cs" t="Include" />
         </e>
