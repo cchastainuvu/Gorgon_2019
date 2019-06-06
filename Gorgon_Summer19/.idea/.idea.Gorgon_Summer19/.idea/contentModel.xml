@@ -6,13 +6,10 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Ataxx.cs" t="Include" />
           <e p="Behaviours.cs" t="Include" />
-          <e p="Checkers" t="Include">
-            <e p="Checkers.cs" t="Include" />
-            <e p="Piece.cs" t="Include" />
-          </e>
+          <e p="DestroyObjectOnTrigger.cs" t="Include" />
           <e p="DraggableOrthographic.cs" t="Include" />
+          <e p="GeneratePieces.cs" t="Include" />
           <e p="ID" t="Include">
             <e p="NameID.cs" t="Include" />
             <e p="ObjectID.cs" t="Include" />
@@ -21,6 +18,7 @@
           <e p="InputRotation.cs" t="Include" />
           <e p="InstantiateTransform.cs" t="Include" />
           <e p="LerpForward.cs" t="Include" />
+          <e p="StringData.cs" t="Include" />
           <e p="ToggleBoolOnClick.cs" t="Include" />
           <e p="TransformForward.cs" t="Include" />
           <e p="UpdateCount.cs" t="Include" />
