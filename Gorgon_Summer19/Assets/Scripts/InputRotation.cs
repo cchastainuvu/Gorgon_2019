@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputRotation : MonoBehaviour
 {
+    public float RotSpeed;
+    
     private void Update()
     {
         RotateObject();
@@ -13,12 +15,12 @@ public class InputRotation : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") > 0)
         {
-            transform.Rotate(0F, 0F, -1F);
+            transform.Rotate(0F, 0F, -RotSpeed);
         }
 
         if (Input.GetAxis("Horizontal") < 0)
         {
-            transform.Rotate(0F, 0F, 1F);
+            transform.Rotate(0F, 0F, RotSpeed);
         }
     }
 }

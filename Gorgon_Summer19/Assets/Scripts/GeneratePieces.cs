@@ -5,7 +5,7 @@ using UnityEngine;
 public class GeneratePieces : MonoBehaviour
 {
     public GameObject Piece;
-    public int Quantity, MinX, MaxX, MinY, MaxY;
+    public float Quantity, MinX, MaxX, MinY, MaxY;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class GeneratePieces : MonoBehaviour
 
     Vector3 GeneratedPosition()
     {
-        int _x, _y;
+        float _x, _y;
 
         _x = UnityEngine.Random.Range(MinX, MaxX);
         _y = UnityEngine.Random.Range(MinY, MaxY);
