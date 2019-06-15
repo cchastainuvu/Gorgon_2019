@@ -42,3 +42,5 @@ sysinfo.txt
 *.DS_Store
 
 *.spp
+
+*.painter_lock
