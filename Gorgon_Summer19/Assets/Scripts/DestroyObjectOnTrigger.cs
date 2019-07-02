@@ -8,6 +8,9 @@ public class DestroyObjectOnTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider obj)
     {
-            Destroy(obj.gameObject);      
+        if (obj.GetComponent<ObjectID>().ID == SpecifiedID)
+        {
+            Destroy(obj.gameObject);  
+        }        
     }
 }

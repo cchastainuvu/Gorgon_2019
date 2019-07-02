@@ -23,9 +23,9 @@ TagManager:
   - DetailShadow
   - PieceRange
   - Board
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Collectible
   - 
   - 
   - 

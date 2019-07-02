@@ -2,24 +2,30 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TriggerIDEvents : MonoBehaviour
+public class ToadState : MonoBehaviour
 {
     public NameID SpecifiedID;
-    public UnityEvent EnterEvent, ExitEvent;
+
+    public Animator ToadAnim;
 
     private void OnTriggerEnter(Collider obj)
     {
         if (obj.GetComponent<ObjectID>().ID == SpecifiedID)
         {
-            EnterEvent.Invoke();
+            ToadAnim.SetBool("Attacking", true);
+        }
+
+        else
+        {
+            ToadAnim.SetBool("Attacking", false);
         }
     }
 
     private void OnTriggerExit(Collider obj)
     {
         if (obj.GetComponent<ObjectID>().ID == SpecifiedID)
-        {
-            ExitEvent.Invoke();
+        {          
+            ToadAnim.SetBool("Attacking", false);
         }
     }
 }

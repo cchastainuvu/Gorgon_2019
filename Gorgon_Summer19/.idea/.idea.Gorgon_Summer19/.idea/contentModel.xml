@@ -20,6 +20,7 @@
           <e p="InstantiateTransform.cs" t="Include" />
           <e p="LerpForward.cs" t="Include" />
           <e p="StringData.cs" t="Include" />
+          <e p="ToadState.cs" t="Include" />
           <e p="ToggleBoolOnClick.cs" t="Include" />
           <e p="TransformForward.cs" t="Include" />
           <e p="UpdateCount.cs" t="Include" />
