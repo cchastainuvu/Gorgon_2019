@@ -8,8 +8,10 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Behaviours.cs" t="Include" />
+          <e p="CheckList.cs" t="Include" />
           <e p="DestroyObjectOnTrigger.cs" t="Include" />
           <e p="DraggableOrthographic.cs" t="Include" />
+          <e p="FPController.cs" t="Include" />
           <e p="GeneratePieces.cs" t="Include" />
           <e p="ID" t="Include">
             <e p="NameID.cs" t="Include" />
